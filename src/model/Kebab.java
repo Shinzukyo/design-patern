@@ -32,7 +32,16 @@ public class Kebab {
 
     public boolean vegetarian(){
         for(Ingredient ingredient : ingredients){
-            if( !ingredient.isVegetarian()){
+            if( !ingredient.vegetarian()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean pescaterian(){
+        for(Ingredient ingredient : ingredients){
+            if( !ingredient.pescaterian()){
                 return false;
             }
         }

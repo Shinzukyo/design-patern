@@ -1,14 +1,12 @@
 package model;
 
-public class Ingredient {
+public class Ingredient extends Aliment{
     private String name;
-    private boolean vegetarian;
+    private Type type;
 
-
-
-    public Ingredient(String name, boolean vegetarian) {
+    public Ingredient(String name, Type type) {
         this.name = name;
-        this.vegetarian = vegetarian;
+        this.type = type;
     }
 
     public String getName() {
@@ -19,11 +17,11 @@ public class Ingredient {
         this.name = name;
     }
 
-    public boolean isVegetarian() {
-        return vegetarian;
+    public boolean vegetarian(){
+        return this.type == Type.VEGETAL;
     }
 
-    public void setVegetarian(boolean vegetarian) {
-        this.vegetarian = vegetarian;
+    public boolean pescaterian(){
+        return this.type == Type.FISH || this.type == Type.VEGETAL;
     }
 }
