@@ -4,10 +4,10 @@ import model.Kebab;
 
 public class Main {
     public static void main (String[] args) {
-        Ingredient i1 = new Ingredient("Salade", Aliment.Type.VEGETAL);
-        Ingredient i2 = new Ingredient("Tomate", Aliment.Type.VEGETAL);
-        Ingredient i3 = new Ingredient("Oignon", Aliment.Type.VEGETAL);
-        Ingredient i4 = new Ingredient("Cornichon", Aliment.Type.VEGETAL);
+        Ingredient i1 = new Ingredient("Salade", Aliment.TYPE.VEGETAL);
+        Ingredient i2 = new Ingredient("Tomate", Aliment.TYPE.VEGETAL);
+        Ingredient i3 = new Ingredient("Oignon", Aliment.TYPE.VEGETAL);
+        Ingredient i4 = new Ingredient("Cornichon", Aliment.TYPE.VEGETAL);
         // Ingredient i5 = new Ingredient("Crevette", Aliment.Type.FISH);
         Kebab kebab = new Kebab();
         kebab.addIngredient(i1);

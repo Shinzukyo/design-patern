@@ -2,9 +2,9 @@ package model;
 
 public class Ingredient extends Aliment{
     private String name;
-    private Type type;
+    private TYPE type;
 
-    public Ingredient(String name, Type type) {
+    public Ingredient(String name, TYPE type) {
         this.name = name;
         this.type = type;
     }
@@ -18,10 +18,10 @@ public class Ingredient extends Aliment{
     }
 
     public boolean vegetarian(){
-        return this.type == Type.VEGETAL;
+        return this.type == TYPE.VEGETAL;
     }
 
     public boolean pescaterian(){
-        return this.type == Type.FISH || this.type == Type.VEGETAL;
+        return this.type == TYPE.FISH || this.type == TYPE.VEGETAL;
     }
 }
