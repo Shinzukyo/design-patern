@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Kebab {
     private ArrayList<Ingredient> ingredients;
+    private ArrayList<Ingredient> sauces;
 
     public Kebab() {
         this.ingredients = new ArrayList<>();
@@ -21,13 +22,9 @@ public class Kebab {
         this.ingredients.add(ingredient);
     }
 
-    public void removeIngredient(String name){
-        for (int i = 0 ; i < this.ingredients.size(); i++){
-            if(this.ingredients.get(i).getName().equals(name)){
-                this.ingredients.remove(i);
-                break;
-            }
-        }
+    public void addSauce(String name){
+        Ingredient sauce = new Ingredient(name, Aliment.Type.SAUCE);
+        this.sauces.add(sauce);
     }
 
     public boolean vegetarian(){
@@ -46,5 +43,9 @@ public class Kebab {
             }
         }
         return true;
+    }
+
+    public void sauces(){
+        System.out.println(this.sauces);
     }
 }
