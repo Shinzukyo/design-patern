@@ -20,7 +20,6 @@ public class Kebab {
             new Ingredient("Tomate", Aliment.TYPE.VEGETAL),
             new Ingredient("Oignon", Aliment.TYPE.VEGETAL),
             new Ingredient("Cheddar", Aliment.TYPE.CHEESE),
-            new Ingredient("Cheddar", Aliment.TYPE.CHEESE)
     };
 
     public Kebab() {
@@ -35,7 +34,12 @@ public class Kebab {
                 break;
 
             case SUPPLEMENT_FROMAGE:
-                this.ingredients.addAll(Arrays.asList(this.SUPPLEMENT_FROMAGE));
+                for(Ingredient ingredient : this.SUPPLEMENT_FROMAGE){
+                    this.ingredients.add(ingredient);
+                    if (ingredient.cheese()){
+                        this.ingredients.add(ingredient);
+                    }
+                }
                 break;
 
             default:

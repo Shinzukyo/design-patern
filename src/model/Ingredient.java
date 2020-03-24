@@ -24,4 +24,8 @@ public class Ingredient extends Aliment{
     public boolean pescaterian(){
         return this.type == TYPE.FISH || this.type == TYPE.VEGETAL;
     }
+
+    public boolean cheese(){
+        return this.type == TYPE.CHEESE;
+    }
 }
